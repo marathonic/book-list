@@ -1,0 +1,90 @@
+:root {
+    --cool-pink: #f6f6ee;
+    --strawberry-pink: #f59cb9;
+    --strawberry-red: #be7e93;
+    --delicious-berry: #00b0da;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+label {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.white-label {
+    color: white;
+}
+
+input {
+    width: 276px;
+    padding: 10px;
+    margin: 16px;
+    border: solid var(--delicious-berry) 3px;
+    border-radius: 16px;
+    font-size: 21px;
+}
+
+.top-section {
+    padding-top: 42px;
+    display: grid;
+    justify-items: center;
+    background-color: var(--cool-pink);
+}
+
+#add-book-btn {
+    padding: 16px;
+    margin: 17px;
+    background-color: var(--strawberry-red);
+    color: white;
+    font-weight: bold;
+    font-size: 29px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.container {
+    background-color: var(--delicious-berry);
+    padding: 20px;
+    min-width: 100vh;
+    height: max-content;
+    display: grid;
+    grid-template-rows: max-content;
+    grid-template-columns: 1fr 1fr;
+    border: solid 3px var(--delicious-berry);
+    border-radius: 10px;
+    text-align: center;
+}
+
+p {
+    font-size: minmax(16px, 50px);
+    color: black;
+    font-weight: bold;
+}
+
+.titleColumn,
+.authorColumn {
+    font-size: 26px;
+    color: white;
+}
+
+.titleColumn {
+    border-right: solid black 1px;
+}
+
+.container > div:nth-child(2) {
+    grid-column: 2;
+    /* background-color: rgb(252, 215, 221); */
+}
+
+.container > div:not(.exception){
+    background-color: var(--cool-pink);
+}
+
+
+
+/* IT WOULD BE MUCH EASIER TO JUST PUT THE 
+"BOOK TITLE" AND "AUTHOR NAME"  HEADERS INSIDE THEIR OWN GRID,
+AND MAKE  ANOTHER GRID CONTAINER INSIDE OF OUR CURRENT CONTAINER DIV,
+AND INSIDE OF THAT SECOND GRID, APPEND OUR ELEMENTS. THAT WAY THEY 
+TAKE UP ONE ROW PER ELEMENT. RIGHT?...*/
